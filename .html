@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    
+    /* Navigation Styles */
+    nav {
+      background-color: #555;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+    }
+    
+    nav a:hover {
+      color: #ff9900;
+    }
+    
+    /* Section Styles */
+    section {
+      padding: 20px;
+      margin: 20px;
+      background-color: #f1f1f1;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      color: #666;
+      line-height: 1.5;
+    }
+    
+    /* Form Styles */
+    form {
+      margin-top: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    /* Congratulatory Message */
+    .congrats {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #ff9900;
+      color: #fff;
+      border-radius: 4px;
+    }
+  </style>
+  <script>
+    function showCongrats(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      var congratsMsg = document.getElementById("congrats-msg");
+      congratsMsg.style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+  
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  
+  <section>
+    <h2>About Me</h2>
+    <p>Hello! I'm Mohcene FRITAS, i'm student at university batna 2, and  this is my simple website .</p>
+  </section>
+  
+  <section>
+    <h2>Contact</h2>
+    <form onsubmit="showCongrats(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      <input type="submit" value="Submit">
+    </form>
+    
+    <div class="congrats" id="congrats-msg">
+      Congratulations! Your message has been submitted.
+    </div>
+  </section>
+</body>
+</html>
